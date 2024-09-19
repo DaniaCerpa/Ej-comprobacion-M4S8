@@ -21,7 +21,8 @@ def guardar_informacion(archivo:str, formato:str):
     except FileExistsError:
         print(f"No es posible crear el archivo {archivo}.{formato} porque ya existe uno previo con este nombre.\nPorfavor intenta con otro nombre")
 
-    
+    except Exception as e:
+        print("Error: ", e)
     
 def main():
     """Función principal del programa que entrega los parametros necesarios para la posterior ejecución de la función guadar_informacio().
